@@ -24,18 +24,32 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>ToDo - Application</h1>
-        <div className="top">
+      <div className='heading'>
+        <button alt="ToDo - Application">
+          <i>T</i>
+          <i>o</i>
+          <i>D</i>
+          <i>o</i>
+          <i>&nbsp;</i>
+          <i>A</i>
+          <i>P</i>
+          <i>P</i>
+          <i>s</i>
+        </button>
+        </div>
+        <div className="input-container">
           <input type="text" placeholder="Add Todos.." value={text} onChange={(e) => setText(e.target.value)} />
-          <div className="add"
+
+          <button className="button"
             onClick={isUpdating ? () => Updating(toDoId, text, setToDo, setText, setIsUpdating) : () => addToDo(text, setText, setToDo)}>
             {
               isUpdating ? "update" : "Add"
             }
 
-          </div>
+          </button>
         </div>
         <div className="list">
+
           {
             toDo.map((item) => < Todo
               key={item._id}
@@ -46,8 +60,11 @@ function App() {
 
         </div>
       </div>
+
     </div>
   );
 }
 
 export default App;
+
+
