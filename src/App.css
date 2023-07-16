@@ -136,12 +136,14 @@ input{
     margin-bottom: 50px;
   }
   .input-container {
+    width: 100%;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
   }
 
   .input-container input {
-    width: 285px;
+    width: 90%;
     border-radius: 0.8rem;
   }
 
