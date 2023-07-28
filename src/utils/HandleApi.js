@@ -12,6 +12,7 @@ const getAllTodo = (setToDo) =>{
 }
 
 const addToDo = (text,setText,setToDo)=>{
+    if(text){
  axios
  .post(`${baseUrl}/save`,{text})
  .then((data)=>{
@@ -21,7 +22,7 @@ const addToDo = (text,setText,setToDo)=>{
  })
 .catch((err)=>console.log(err))
 }
-
+}
 
 
 const Updating = (toDoId,text,setToDo,setText,setIsUpdating)=>{
