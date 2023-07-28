@@ -43,7 +43,7 @@ function App() {
           <button className="button"
             onClick={isUpdating ? () => Updating(toDoId, text, setToDo, setText, setIsUpdating) : () => addToDo(text, setText, setToDo)}>
             {
-              isUpdating ? "update" : "Add"
+              isUpdating ? "Update" : "Add"
             }
 
           </button>
